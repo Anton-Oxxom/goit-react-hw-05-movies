@@ -1,0 +1,52 @@
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: rgb(109, 109, 193);
+}
+
+.form {
+    position: fixed;
+    top: 10px;
+    z-index: 101;
+    display: flex;
+    align-items: center;
+    margin-left: 270px;
+}
+
+.input {
+    width: 400px;
+    height: 25px;
+    border-radius: 5px;
+    padding-left: 10px;
+    outline: none;
+    border: none;   
+}
+
+.button {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all 250ms linear;
+}
+
+.button:hover,
+.button:focus {
+    transform: scale(1.1);
+    transition: all 250ms linear;
+}
+
+.icon {
+    height: 25px;
+    width: 25px;
+}
