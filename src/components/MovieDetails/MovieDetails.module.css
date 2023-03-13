@@ -1,0 +1,105 @@
+.button {
+    display: block;
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 60px;
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(109, 109, 193);
+    outline: none;
+    cursor: pointer;
+    transition: all 250ms linear;
+}
+
+.button:hover,
+.button:focus {
+    color: black;
+    box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.4);
+    transition: all 250ms linear;
+}
+
+.details_container {
+    display: flex;
+    align-items: flex-start;
+    width: 1400px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.image {
+    border-radius: 5px;
+    transform: scale(1);
+    transition: all 250ms linear;
+}
+
+.image:hover,
+.image:focus {
+    transform: scale(1.2);
+    transition: all 250ms linear;
+}
+
+.info {
+    margin-left: 100px;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.release_date {
+    margin-bottom: 20px;
+}
+
+.score {
+    margin-bottom: 30px;
+}
+
+.overview {
+    margin-bottom: 10px;
+}
+
+.info_overview {
+    text-align: start;
+    margin-bottom: 30px;
+}
+
+.genres {
+    margin-bottom: 10px;
+}
+
+.more_information {
+    background-color: rgb(109, 109, 193);
+    color: black;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+}
+
+.text {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.link {
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 250ms linear;
+}
+
+.link:not(:last-child) {
+    margin-right: 25px;
+}
+
+.link:hover,
+.link:focus {
+    color: blue;
+    transition: all 250ms linear;
+}
