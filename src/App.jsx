@@ -6,10 +6,16 @@ import { Loader } from './components/Loader';
 
 import styles from './App.module.css';
 
-const HomePage = lazy(() => import('./components/Pages/HomePage'));
-const MoviePage = lazy(() => import('./components/Pages/MoviePage'));
+const HomePage = lazy(() => import('./Pages/HomePage'));
+const MoviePage = lazy(() => import('./Pages/MoviePage'));
 const MovieDetailsPage = lazy(() =>
-  import('./components/Pages/MovieDetailsPage')
+  import('./Pages/MovieDetailsPage')
+);
+const CastPage= lazy(() =>
+  import('./Pages/CastPage')
+);
+const ReviewsPage= lazy(() =>
+  import('./Pages/ReviewsPage')
 );
 
 export const App = () => {
@@ -20,7 +26,9 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="movies" element={<MoviePage />} />
-          <Route path="movies/:movieId/*" element={<MovieDetailsPage />} />
+          <Route path="movies/:movieId" element={<MovieDetailsPage />} />
+          <Route path="movies/:movieId/cast" element={<CastPage />} />
+          <Route path="movies/:movieId/reviews" element={<ReviewsPage />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Suspense>
