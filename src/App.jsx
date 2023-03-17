@@ -21,16 +21,21 @@ const ReviewsPage= lazy(() =>
 export const App = () => {
   return (
     <div className={styles.App}>
-      <Header />
+     
       <Suspense fallback={<Loader />}>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          
+        <Route path="/" element={<Header />} />
+          <Route index element={<HomePage />} />
           <Route path="movies" element={<MoviePage />} />
-          <Route path="movies/:movieId" element={<MovieDetailsPage />} />
-          <Route path="movies/:movieId/cast" element={<CastPage />} />
-          <Route path="movies/:movieId/reviews" element={<ReviewsPage />} />
+          
+          <Route path="movies/:movieId" element={<MovieDetailsPage />} >
+             <Route path="cast" element={<CastPage />} />
+              <Route path="reviews" element={<ReviewsPage />} />
+            </Route >
+          
           <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
+        </Routes >
       </Suspense>
     </div>
   );
